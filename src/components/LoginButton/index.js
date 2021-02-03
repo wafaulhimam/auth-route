@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { LogIn, LogOut } from '../../redux/authentication/actions';
 
 const LoginButton = ({ isLogin, loginAction, logoutAction }) => {
+    const history = useHistory();
+
     const handleClick =() => {
         // console.log('Klik Button');
         if (isLogin) {
@@ -11,6 +14,7 @@ const LoginButton = ({ isLogin, loginAction, logoutAction }) => {
         } else {
             loginAction();
             console.log('Login');
+            history.push('/content');
         }
     }
 

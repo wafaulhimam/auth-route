@@ -2,7 +2,7 @@ import { LOG_IN, LOG_OUT } from './actionTypes';
 
 // initial state
 const initialState = {
-    isAuthenticated: false
+    isAuthenticated: false,
 }
 
 // create reducer
